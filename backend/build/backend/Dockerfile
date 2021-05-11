@@ -13,7 +13,7 @@ ENV CGO_ENABLED=0
 
 RUN go mod download
 RUN go mod verify
-RUN go build -o goapp -ldflags '-w -s' main.go
+RUN go build -o goapp -ldflags '-w -s' ./cmd/main.go
 
 # ---
 

@@ -17,7 +17,7 @@ test: clean
 	go test -v -cover ./...
 
 build-api: test
-	docker build . --no-cache -t $(CONTAINER_IMAGE):$(RELEASE) -f build/Dockerfile
+	docker build . --no-cache -t $(CONTAINER_IMAGE):$(RELEASE) -f build/backend/Dockerfile
 
 create-api: build-api
 	docker-compose -f ./build/backend/docker-compose.yaml up -d
