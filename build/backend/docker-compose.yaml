@@ -1,7 +1,0 @@
-version: "3"
-services:
-  mssql:
-    container_name: moon-coin-backend
-    image: moon-coin-api:0.0.1
-    ports:
-      - 1433:1433
